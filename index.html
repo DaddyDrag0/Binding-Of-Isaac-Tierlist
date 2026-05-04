@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repentance Item Tier List Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Binding of Isaac: Repentance Tier List (Data Editor)</h1>
+
+  <div id="countBar">
+    <strong>Total items:</strong> <span id="itemCount">0</span>
+    <span id="countWarning" role="alert"></span>
+  </div>
+
+  <section class="toolbar">
+    <input id="search" type="search" placeholder="Search name, ID, effect, tags, notes..." />
+    <select id="tierFilter"></select>
+    <select id="qualityFilter"></select>
+    <select id="typeFilter"></select>
+    <button id="saveBtn">Save to localStorage</button>
+    <button id="resetBtn">Reset local edits</button>
+    <button id="exportJsonBtn">Export JSON</button>
+    <button id="exportCsvBtn">Export CSV</button>
+    <label>Import JSON <input id="importJsonInput" type="file" accept="application/json" /></label>
+  </section>
+
+  <table id="itemsTable">
+    <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Quality</th><th>Type</th><th>Effect</th>
+        <th>Tier</th><th>Why This Tier</th><th>Downsides</th><th>Synergies</th><th>Tags</th><th>Confidence</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="app.js"></script>
+</body>
+</html>
